@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "ubuntu", sans-serif;
+}
+.flexContainer {
+  display: flex;
+}
+#home {
+  background-color: black;
+  background-image: linear-gradient(to left,#084A71,#007192,#00999E);
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#introduction {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+.highlight {
+  color: #17BF94;
+}
+button {
+  font-size: 0.8em;
+  background-color: Transparent;
+  border-color: white;
+  margin-top: 20px;
+  padding: 10px 15px;
+  color: white;
+}
+.fa-arrow-right {
+  margin-left: 10px;
+  font-size: 0.8em;
+  transform: rotate(0deg);
+  transition-duration: 0.5s;
+}
+button:hover {
+  background-color: #17BF94;
+  border-color: #17BF94;
+}
+button:hover .fa-arrow-right{
+  transform: rotate(90deg);
+  transition-duration: 0.5s;
+}
+nav {
+  background-color: #042C43;
+  padding: 10px;
+  border-bottom: 3px solid #17BF94;
+}
+.navItems {
+  list-style-type: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 30px;
+}
+li a:hover {
+  color: #17BF94 !important;
+  transition-duration: 0.5s;
+}
+#about {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+.navSticky {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+#portfolio {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color:red;
+}
+#contact {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: green;
+}
