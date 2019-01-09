@@ -13,19 +13,27 @@ window.onload = function () {
   let contactOffset = contact.offsetTop - 50;
   let navContact = document.getElementById('navContact');
   window.onscroll = function () {
-    (window.pageYOffset >= navbarOffset) ? navbar.classList.add('navSticky') : navbar.classList.remove('navSticky');
+    if (window.pageYOffset >= navbarOffset) {
+      navbar.classList.add('navSticky');
+      about.style.marginTop = navbar.offsetHeight + 'px';
+    } else {
+      navbar.classList.remove('navSticky');
+      about.style.marginTop = '0px';
+    }
     switch (true) {
       case (window.pageYOffset >= aboutOffset && window.pageYOffset <= portfolioOffset):
         navHome.style.color = 'white';
         navAbout.style.color = '#17BF94';
         navPortfolio.style.color = 'white';
         navContact.style.color = 'white';
+        document.getElementById('titleAbout').classList.add('solidAnim');
         break;
       case (window.pageYOffset >= portfolioOffset && window.pageYOffset <= contactOffset):
         navHome.style.color = 'white';
         navAbout.style.color = 'white';
         navPortfolio.style.color = '#17BF94';
         navContact.style.color = 'white';
+
         break;
       case (window.pageYOffset >= contactOffset):
         navHome.style.color = 'white';

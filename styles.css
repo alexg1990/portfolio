@@ -69,11 +69,7 @@ li a:hover {
   color: #17BF94 !important;
   transition-duration: 0.5s;
 }
-#about {
-  height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-}
+
 .navSticky {
   top: 0;
   position: fixed;
@@ -90,4 +86,53 @@ li a:hover {
   width: 100vw;
   max-width: 100%;
   background-color: green;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "skill1 skill2 skill3 skill4"
+    "author author skillOverview skillOverview";
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+.header {
+  background-color: yellow;
+  grid-area: header;
+  justify-content: center;
+  align-items: center;
+}
+.titleAbout {
+  opacity: 0;
+}
+.solidAnim {
+  opacity: 100;
+  transition-duration: 1s;
+}
+.skill1 {
+  background-color: blue;
+  grid-area: skill1;
+}
+.skill2 {
+  background-color: green;
+  grid-area: skill2;
+}
+.skill3 {
+  background-color: purple;
+  grid-area: skill3;
+}
+.skill4 {
+  background-color: pink;
+  grid-area: skill4;
+}
+.author {
+  background-color: : white;
+  grid-area: author;
+}
+.skillOverview {
+  background-color: red;
+  grid-area: skillOverview;
 }
