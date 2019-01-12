@@ -90,7 +90,7 @@ li a:hover {
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
   grid-template-areas:
     "header header header header"
     "skill1 skill2 skill3 skill4"
@@ -100,17 +100,36 @@ li a:hover {
     max-width: 100%;
 }
 .header {
-  background-color: yellow;
+  background-color: white;
   grid-area: header;
   justify-content: center;
   align-items: center;
 }
-.titleAbout {
+#titleAbout {
   opacity: 0;
+  padding: 5px;
+}
+#titleAbout:after {
+  content: "";
+  width: 50%;
+  left: 25%;
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  border-bottom: 4px solid black;
+}
+@keyframes solidAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-50vw);
+  } to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 .solidAnim {
-  opacity: 100;
-  transition-duration: 1s;
+  animation: solidAnim 2s forwards;
+
 }
 .skill1 {
   background-color: blue;
