@@ -16,12 +16,17 @@ window.onload = function () {
     if (window.pageYOffset >= navbarOffset) {
       navbar.classList.add('navSticky');
       about.style.marginTop = navbar.offsetHeight + 'px';
+      console.log(about.style.marginTop);
     } else {
       navbar.classList.remove('navSticky');
       about.style.marginTop = '0px';
+      console.log(about.style.marginTop);
     }
-    if(window.pageYOffset >= aboutOffset - 20) {
+    if (window.pageYOffset >= aboutOffset - 350) {
       animLeftRight('titleAbout');
+      setTimeout(function () {
+        animLeftRight('titleAbout', true);
+      }, 450);
     }
     switch (true) {
       case (window.pageYOffset >= aboutOffset && window.pageYOffset <= portfolioOffset):
@@ -29,7 +34,6 @@ window.onload = function () {
         navAbout.style.color = '#17BF94';
         navPortfolio.style.color = 'white';
         navContact.style.color = 'white';
-
         break;
       case (window.pageYOffset >= portfolioOffset && window.pageYOffset <= contactOffset):
         navHome.style.color = 'white';
@@ -50,8 +54,12 @@ window.onload = function () {
         navContact.style.color = 'white';
     }
   };
-  function animLeftRight (obj) {
+  function animLeftRight (obj, isUnderscore = false) {
     let objId = document.getElementById(obj);
-    objId.classList.add('solidAnim');
+    if (!isUnderscore) {
+      objId.classList.add('solidAnim');
+    } else {
+      objId.nextElementSibling.classList.add('solidAnim');
+    }
   }
 };

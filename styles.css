@@ -1,3 +1,6 @@
+:root {
+  --cyan: #17BF94;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -26,7 +29,7 @@ body {
   text-align: center;
 }
 .highlight {
-  color: #17BF94;
+  color: var(--cyan);
 }
 button {
   font-size: 0.8em;
@@ -43,17 +46,18 @@ button {
   transition-duration: 0.5s;
 }
 button:hover {
-  background-color: #17BF94;
-  border-color: #17BF94;
+  background-color: var(--cyan);
+  border-color: var(--cyan);
 }
-button:hover .fa-arrow-right{
+button:hover > .fa-arrow-right{
   transform: rotate(90deg);
   transition-duration: 0.5s;
 }
 nav {
   background-color: #042C43;
   padding: 10px;
-  border-bottom: 3px solid #17BF94;
+  border-bottom: 3px solid var(--cyan);
+  z-index: 1;
 }
 .navItems {
   list-style-type: none;
@@ -66,7 +70,7 @@ li a {
   padding: 0 30px;
 }
 li a:hover {
-  color: #17BF94 !important;
+  color: var(--cyan) !important;
   transition-duration: 0.5s;
 }
 
@@ -93,7 +97,7 @@ li a:hover {
   grid-template-rows: 0.5fr 1fr 1fr;
   grid-template-areas:
     "header header header header"
-    "skill1 skill2 skill3 skill4"
+    "skills skills skills skills"
     "author author skillOverview skillOverview";
     height: 100vh;
     width: 100vw;
@@ -104,51 +108,87 @@ li a:hover {
   grid-area: header;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 #titleAbout {
+  font-size: 2.2em;
   opacity: 0;
-  padding: 5px;
+  padding-bottom: 10px;
 }
-#titleAbout:after {
-  content: "";
-  width: 50%;
-  left: 25%;
-  position: absolute;
-  height: 1px;
-  bottom: 0;
-  border-bottom: 4px solid black;
+.underline {
+  border-top: 4px solid black;
+  width:60px;
+  opacity: 0;
 }
 @keyframes solidAnim {
   from {
     opacity: 0;
-    transform: translateX(-50vw);
+    transform: translateX(-25vw);
   } to {
     opacity: 1;
     transform: translateX(0px);
   }
 }
 .solidAnim {
-  animation: solidAnim 2s forwards;
+  animation: solidAnim 1s forwards;
+}
+.skills {
+  grid-area: skills;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.skill {
+  padding-bottom: 20px;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+}
+  .skill > h2 {
+    padding-top: 15px;
+    text-align:center;
+  }
+  .skill > p {
+    text-align:center;
+  }
+.octagon {
+    width: 110px;
+    height: 110px;
+    background: var(--cyan);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
+.octagon:before {
+    content: "";
+    width: 52px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 29px solid var(--cyan);
+    border-left: 29px solid white;
+    border-right: 29px solid white;
 }
-.skill1 {
-  background-color: blue;
-  grid-area: skill1;
+
+.octagon:after {
+    content: "";
+    width: 52px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 29px solid var(--cyan);
+    border-left: 29px solid white;
+    border-right: 29px solid white;
 }
-.skill2 {
-  background-color: green;
-  grid-area: skill2;
-}
-.skill3 {
-  background-color: purple;
-  grid-area: skill3;
-}
-.skill4 {
-  background-color: pink;
-  grid-area: skill4;
+.fa-lightbulb {
+  font-size: 50px;
+  color: white;
 }
 .author {
-  background-color: : white;
+  background-color: white;
   grid-area: author;
 }
 .skillOverview {
