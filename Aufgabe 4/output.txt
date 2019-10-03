@@ -1,0 +1,90 @@
+Welcome to the logistics management system!
+Please, enter one of the following commands:
+0 to list all locations
+1 to create a new location
+2 to list all registered deliveries
+3 to register a new delivery
+4 to adjust the weight of an already registered delivery
+5 to adjust the receiver of an already registered delivery
+6 to exit.
+3
+Locations:
+[0]: Berlin (75,25)
+[1]: Hamburg (25,10)
+[2]: Köln (10,50)
+[3]: München (60,70)
+[4]: Frankfurt (25,60)
+[5]: Stuttgart (20,80)
+LocationID of sender:3
+LocationID of receiver:1
+The following delivery has been added to the system:
+Delivery from München to Hamburg, 0.0kg, arrival in 69000ms
+Please, enter one of the following commands:
+0 to list all locations
+1 to create a new location
+2 to list all registered deliveries
+3 to register a new delivery
+4 to adjust the weight of an already registered delivery
+5 to adjust the receiver of an already registered delivery
+6 to exit.
+4
+Registered deliveries:
+[0]: Delivery from Berlin to Köln, 23.1kg, arrival in 42395ms
+[1]: Delivery from München to Frankfurt, 0.7kg, arrival in 9395ms
+[2]: Delivery from Hamburg to Berlin, 2.7kg, arrival in 25394ms
+[3]: Delivery from Frankfurt to Köln, 2.3kg, arrival in 0ms
+[4]: Delivery from München to Berlin, 10.8kg, arrival in 20394ms
+[5]: Delivery from München to Hamburg, 0.0kg, arrival in 62254ms
+Please, enter index of delivery:5
+Please, enter new weight for this delivery:0.3
+Please, enter one of the following commands:
+0 to list all locations
+1 to create a new location
+2 to list all registered deliveries
+3 to register a new delivery
+4 to adjust the weight of an already registered delivery
+5 to adjust the receiver of an already registered delivery
+6 to exit.
+5
+Registered deliveries:
+[0]: Delivery from Berlin to Köln, 23.1kg, arrival in 18636ms
+[1]: Delivery from München to Frankfurt, 0.7kg, arrival in 0ms
+[2]: Delivery from Hamburg to Berlin, 2.7kg, arrival in 1636ms
+[3]: Delivery from Frankfurt to Köln, 2.3kg, arrival in 0ms
+[4]: Delivery from München to Berlin, 10.8kg, arrival in 0ms
+[5]: Delivery from München to Hamburg, 0.3kg, arrival in 38496ms
+Please, enter index of delivery:1
+Locations:
+[0]: Berlin (75,25)
+[1]: Hamburg (25,10)
+[2]: Köln (10,50)
+[3]: München (60,70)
+[4]: Frankfurt (25,60)
+[5]: Stuttgart (20,80)
+Please, enter locationID of new receiver:0
+Please, enter one of the following commands:
+0 to list all locations
+1 to create a new location
+2 to list all registered deliveries
+3 to register a new delivery
+4 to adjust the weight of an already registered delivery
+5 to adjust the receiver of an already registered delivery
+6 to exit.
+2
+Registered deliveries:
+[0]: Delivery from Berlin to Köln, 23.1kg, arrival in 0ms
+[1]: Delivery from München to Berlin, 0.7kg, arrival in 0ms
+[2]: Delivery from Hamburg to Berlin, 2.7kg, arrival in 0ms
+[3]: Delivery from Frankfurt to Köln, 2.3kg, arrival in 0ms
+[4]: Delivery from München to Berlin, 10.8kg, arrival in 0ms
+[5]: Delivery from München to Hamburg, 0.3kg, arrival in 19344ms
+Please, enter one of the following commands:
+0 to list all locations
+1 to create a new location
+2 to list all registered deliveries
+3 to register a new delivery
+4 to adjust the weight of an already registered delivery
+5 to adjust the receiver of an already registered delivery
+6 to exit.
+6
+Byebye!
